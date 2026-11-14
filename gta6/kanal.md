@@ -84,6 +84,10 @@ eigener Text. Uhrzeiten sind Vorschläge, keine belegten Bestzeiten. Status nur 
 | Mo 16.11., 18:00 | countdown-3tage (fertig) | YT Shorts + TikTok + Reels | Vice City Momente | keine | bereit | geplant |
 | Di 17.11., 18:00 | countdown-2tage (fertig) | YT Shorts + TikTok + Reels | Vice City Momente | keine | bereit | geplant |
 | Mi 18.11., 18:00 | countdown-1tag (fertig) | YT Shorts + TikTok + Reels | Vice City Momente | keine | bereit | geplant |
+| Sa 14.11., 21:00 | fakt-1-ort (fertig) | YT Shorts + TikTok + Reels | Vice City Momente | keine | bereit | geplant |
+| So 15.11., 21:00 | fakt-2-duo (fertig) | YT Shorts + TikTok + Reels | Vice City Momente | keine | bereit | geplant |
+| Mo 16.11., 21:00 | fakt-3-konsole (fertig) | YT Shorts + TikTok + Reels | Vice City Momente | keine | bereit | geplant |
+| Di 17.11., 21:00 | fakt-4-pc (fertig) | YT Shorts + TikTok + Reels | Vice City Momente | keine | bereit | geplant |
 | Do 19.11., 08:00 | countdown-heute (fertig) | YT Shorts + TikTok + Reels | Vice City Momente | keine | bereit | geplant |
 | Do 19.11., 18:00 | 01 (erster Launch-Moment) | YouTube Shorts | Vice City Momente | offen, Suche am 19.11. | ausstehend | geplant |
 | Do 19.11., 18:30 | T01 (eigenes Gameplay + Tokyo Girl) | TikTok | Vice City Momente | Tokyo Girl | ausstehend | geplant |

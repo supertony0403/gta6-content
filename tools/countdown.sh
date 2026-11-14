@@ -10,7 +10,7 @@ TMP=$(mktemp -d); trap 'rm -rf "$TMP"' EXIT
 mkdir -p "$OUT"
 
 render() { # label big line1 line2
-  local label=$1 big=$2 l1=$3 l2=$4 dst="$OUT/countdown-$1.mp4"
+  local label=$1 big=$2 l1=$3 l2=$4 dst="$OUT/${PREFIX:-countdown}-$1.mp4"
   [ -e "$dst" ] && { echo "skip (exists): $dst"; return; }
   printf '%s' "$big" > "$TMP/big.txt"; printf '%s' "$l1" > "$TMP/l1.txt"; printf '%s' "$l2" > "$TMP/l2.txt"
   printf '%s' "19.11.2026 · PS5 & Xbox Series X|S" > "$TMP/l3.txt"
@@ -37,3 +37,10 @@ render 3tage "3" "NOCH" "TAGE BIS GTA 6"
 render 2tage "2" "NOCH" "TAGE BIS GTA 6"
 render 1tag  "1" "NOCH" "TAG BIS GTA 6"
 render heute "0" "ES IST SOWEIT" "GTA 6 IST DA"
+
+# Fact shorts: only facts consistently reported for Rockstar's announcements (checked 14.11.2026)
+PREFIX=fakt
+render 1-ort     "VC"  "ZURÜCK NACH"  "VICE CITY IN LEONIDA"
+render 2-duo     "2"   "ZWEI HAUPTFIGUREN" "JASON & LUCIA"
+render 3-konsole "PS5" "ZUM START AUF" "UND XBOX SERIES X|S"
+render 4-pc      "PC?" "UND DER"      "NOCH KEIN TERMIN"

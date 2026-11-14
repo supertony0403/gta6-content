@@ -22,3 +22,15 @@ YouTube-Beschreibung (für alle gleich):
 > GTA-6-Momente auf Deutsch. Kein offizieller Kanal von Rockstar Games. #Shorts #GTA6
 
 Die Fragen in den Captions sollen Kommentare auslösen. Antworte in der ersten Stunde selbst auf Kommentare.
+
+## Fakten-Shorts (fakt-*.mp4)
+
+Nur Angaben, die in mehreren Berichten über Rockstars Ankündigungen übereinstimmen (geprüft 14.11.2026).
+Der Preis ist bewusst weggelassen, weil die Angaben sich widersprechen. Regel-Check: **bereit**.
+
+| Datei | Posten am | YouTube-Titel (#Shorts) | TikTok / Reels Caption |
+|---|---|---|---|
+| fakt-1-ort | Sa 14.11. abends | GTA 6 spielt in Vice City #Shorts | Zurück nach Vice City, diesmal im ganzen Staat Leonida. #GTA6 #ViceCity #Leonida |
+| fakt-2-duo | So 15.11. abends | Jason und Lucia: die zwei Hauptfiguren von GTA 6 #Shorts | Jason oder Lucia: Wer ist dein Favorit? #GTA6 #GTAVI |
+| fakt-3-konsole | Mo 16.11. abends | GTA 6: Auf welchen Konsolen? #Shorts | PS5 oder Xbox Series X\|S: Worauf spielst du? #GTA6 #PS5 #Xbox |
+| fakt-4-pc | Di 17.11. abends | GTA 6 auf PC? Stand heute #Shorts | Für PC gibt es noch keinen Termin. Wartest du oder holst du dir eine Konsole? #GTA6 #PCGaming |
