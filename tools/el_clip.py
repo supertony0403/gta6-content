@@ -11,6 +11,8 @@ Requires ELEVENLABS_API_KEY in the environment.
 import hashlib
 import json
 import os
+import re
+import urllib.error
 import subprocess
 import sys
 from pathlib import Path
@@ -25,6 +27,7 @@ W, H, FG_H = 1080, 1920, 608
 FG_Y = (H - FG_H) // 2
 VO_DELAY = 0.2
 DUCK = 0.22
+RENDER_VERSION = 2  # bump on any visual/audio change not captured by the ASS text
 
 
 def secs(ts):
@@ -33,12 +36,13 @@ def secs(ts):
 
 
 def ass_time(t):
-    t = max(0.0, t)
+    t = round(max(0.0, t), 2)
     return f"{int(t // 3600)}:{int(t % 3600 // 60):02d}:{t % 60:05.2f}"
 
 
 def esc(text):
-    return text.replace("\\", "").replace("{", "(").replace("}", ")")
+    return (text.replace("\\", "").replace("{", "(").replace("}", ")")
+            .replace("\r", "").replace("\n", r"\N"))
 
 
 def build_ass(clip, credit, length, path):
@@ -82,18 +86,27 @@ def main():
     for clip in cfg["clips"]:
         if only and clip["id"] not in only:
             continue
+        if not re.fullmatch(r"[a-z0-9-]+", clip["id"]):
+            print(f"error: invalid clip id {clip['id']!r}")
+            continue
         dst = CLIPS / f"{clip['id']}.mp4"
-        tag = hashlib.sha256(json.dumps([clip, cfg["voice"], cfg["model"], SETTINGS, cfg["credit"]],
+        tag = hashlib.sha256(json.dumps([RENDER_VERSION, clip, cfg, SETTINGS, DUCK, VO_DELAY, W, H, FG_H],
                                         ensure_ascii=False).encode()).hexdigest()[:10]
-        mp3 = VO_DIR / f"{clip['id']}-{hashlib.sha256(clip['vo'].encode()).hexdigest()[:10]}.mp3"
+        vo_tag = hashlib.sha256(json.dumps([clip["vo"], cfg["voice"], cfg["model"], SETTINGS],
+                                           ensure_ascii=False).encode()).hexdigest()[:10]
+        mp3 = VO_DIR / f"{clip['id']}-{vo_tag}.mp3"
         stamp = CLIPS / f".{clip['id']}.{tag}"
         if dst.exists() and stamp.exists():
             print(f"skip (up to date): {dst.name}")
             continue
         if not mp3.exists():
             vid = vid or voice_id(cfg["voice"], key)
-            audio = api(f"/v1/text-to-speech/{vid}?output_format=mp3_44100_128", key,
-                        {"text": clip["vo"], "model_id": cfg["model"], "voice_settings": SETTINGS})
+            try:
+                audio = api(f"/v1/text-to-speech/{vid}?output_format=mp3_44100_128", key,
+                            {"text": clip["vo"], "model_id": cfg["model"], "voice_settings": SETTINGS})
+            except (urllib.error.URLError, OSError) as err:
+                print(f"error: TTS failed for {clip['id']}: {err}")
+                continue
             if len(audio) < 1000:
                 print(f"error: empty TTS response for {clip['id']}")
                 continue
@@ -101,6 +114,9 @@ def main():
             mp3.with_suffix(".part").rename(mp3)
         start, length = secs(clip["start"]), secs(clip["end"]) - secs(clip["start"])
         vd = VO_DELAY + duration(mp3) + 0.2
+        if vd > length:
+            print(f"error: voiceover longer than clip for {clip['id']} ({vd:.1f}s > {length:.1f}s)")
+            continue
         ass = CLIPS / f"{clip['id']}.ass"
         build_ass(clip, cfg["credit"], length, ass)
         tmp = dst.with_name(dst.stem + ".part.mp4")
@@ -110,7 +126,7 @@ def main():
             f"eq=brightness=-0.22:saturation=1.2[bg];"
             f"[b]scale={W}:{FG_H}[fg];"
             f"[bg][fg]overlay=0:{FG_Y},ass={ass.name},setsar=1,format=yuv420p[v];"
-            f"[0:a]volume='if(lt(t,{vd:.2f}),{DUCK},1)':eval=frame[orig];"
+            f"[0:a]volume='{DUCK}+(1-{DUCK})*clip((t-{vd:.2f})/0.4,0,1)':eval=frame[orig];"
             f"[1:a]adelay={int(VO_DELAY * 1000)}:all=1,volume=1.6,apad[vo];"
             f"[orig][vo]amix=inputs=2:duration=first:normalize=0,"
             f"loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[aout]"
