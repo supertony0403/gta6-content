@@ -79,6 +79,12 @@ eigener Text. Uhrzeiten sind Vorschläge, keine belegten Bestzeiten. Status nur 
 
 | Tag und Uhrzeit | Clip | Plattform | Konto | Kampagne | Regel-Check | Status |
 |---|---|---|---|---|---|---|
+| Sa 14.11., 18:00 | countdown-5tage (fertig) | YT Shorts + TikTok + Reels | Vice City Momente | keine (eigenes Material) | bereit | geplant |
+| So 15.11., 18:00 | countdown-4tage (fertig) | YT Shorts + TikTok + Reels | Vice City Momente | keine | bereit | geplant |
+| Mo 16.11., 18:00 | countdown-3tage (fertig) | YT Shorts + TikTok + Reels | Vice City Momente | keine | bereit | geplant |
+| Di 17.11., 18:00 | countdown-2tage (fertig) | YT Shorts + TikTok + Reels | Vice City Momente | keine | bereit | geplant |
+| Mi 18.11., 18:00 | countdown-1tag (fertig) | YT Shorts + TikTok + Reels | Vice City Momente | keine | bereit | geplant |
+| Do 19.11., 08:00 | countdown-heute (fertig) | YT Shorts + TikTok + Reels | Vice City Momente | keine | bereit | geplant |
 | Do 19.11., 18:00 | 01 (erster Launch-Moment) | YouTube Shorts | Vice City Momente | offen, Suche am 19.11. | ausstehend | geplant |
 | Do 19.11., 18:30 | T01 (eigenes Gameplay + Tokyo Girl) | TikTok | Vice City Momente | Tokyo Girl | ausstehend | geplant |
 | Do 19.11., 21:00 | 02 | YouTube Shorts | Vice City Momente | offen | ausstehend | geplant |
