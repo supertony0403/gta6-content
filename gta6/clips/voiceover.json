@@ -1,16 +1,22 @@
 {
-  "voice": "Daniel Dark - Crime Narrator",
+  "voice": "Tom Magic - german young adult perfect narrator. ",
   "model": "eleven_multilingual_v2",
   "texte": {
     "countdown-5tage": "Noch fünf Tage. Am neunzehnten November erscheint GTA 6, für PS5 und Xbox Series. Folg dem Kanal: Ab dem Start gibt's hier jeden Tag die besten Momente.",
     "countdown-4tage": "Noch vier Tage bis GTA 6. Was machst du zuerst? Die Story, oder einfach nur Chaos in Vice City? Schreib's in die Kommentare.",
-    "countdown-3tage": "Drei Tage. Wer hat sich für den neunzehnten schon Urlaub genommen? Ehrlich jetzt.",
-    "countdown-2tage": "Übermorgen ist es so weit. PS5 oder Xbox: Worauf spielst du GTA 6?",
-    "countdown-1tag": "Morgen. Morgen erscheint GTA 6. Wer schläft heute Nacht überhaupt noch?",
-    "countdown-heute": "Es ist so weit. GTA 6 ist da. Ab heute zeigen wir dir hier jeden Tag die besten Momente aus Vice City.",
-    "fakt-1-ort": "GTA 6 bringt uns zurück nach Vice City. Diesmal im ganzen Bundesstaat Leonida.",
-    "fakt-2-duo": "Zwei Hauptfiguren: Jason und Lucia. Auf wen freust du dich mehr?",
-    "fakt-3-konsole": "Zum Start erscheint GTA 6 auf PS5 und auf Xbox Series X und S.",
-    "fakt-4-pc": "Und auf dem PC? Für die PC-Version gibt es bisher keinen Termin."
+    "countdown-3tage": "DREI Tage noch! Wer hat sich für den Neunzehnten schon Urlaub genommen? Ehrlich jetzt, Bro!",
+    "countdown-2tage": "Übermorgen ist es soweit! PS5 oder Xbox, worauf zockst du GTA 6? Ab in die Kommentare!",
+    "countdown-1tag": "MORGEN! Morgen kommt GTA 6! Wer schläft heute Nacht überhaupt noch? Ich nicht!",
+    "countdown-heute": "ES IST DA! GTA 6 ist endlich draußen! Ab jetzt gibt's hier jeden Tag die krassesten Momente!",
+    "fakt-1-ort": "Leute, wir gehen zurück nach Vice City! Und diesmal ist es der ganze Bundesstaat Leonida. Krass!",
+    "fakt-2-duo": "Zwei Hauptfiguren: Jason und Lucia! Auf wen freust du dich mehr? Schreib's rein!",
+    "fakt-3-konsole": "GTA 6 kommt zum Start auf PS5 und Xbox Series X und S. Seid ihr ready?",
+    "fakt-4-pc": "Und PC? Bro, für die PC-Version gibt's noch keinen Termin. Holt ihr euch eine Konsole?"
+  },
+  "settings": {
+    "stability": 0.28,
+    "similarity_boost": 0.8,
+    "style": 0.75,
+    "use_speaker_boost": true
   }
 }

@@ -56,9 +56,10 @@ def main():
     cfg = json.loads((CLIPS / "voiceover.json").read_text(encoding="utf-8"))
     VO_DIR.mkdir(exist_ok=True)
     vid = None
+    settings = cfg.get("settings", SETTINGS)
     for name, text in cfg["texte"].items():
         src, dst = CLIPS / f"{name}.mp4", CLIPS / f"{name}-vo.mp4"
-        tag = hashlib.sha256(json.dumps([text, cfg["voice"], cfg["model"], SETTINGS],
+        tag = hashlib.sha256(json.dumps([text, cfg["voice"], cfg["model"], settings],
                                         ensure_ascii=False).encode()).hexdigest()[:10]
         mp3 = VO_DIR / f"{name}-{tag}.mp3"
         if not src.exists():
@@ -71,7 +72,7 @@ def main():
             vid = vid or voice_id(cfg["voice"], key)
             audio = api(f"/v1/text-to-speech/{vid}?output_format=mp3_44100_128", key,
                         {"text": text, "model_id": cfg["model"],
-                         "voice_settings": SETTINGS})
+                         "voice_settings": settings})
             if len(audio) < 1000:
                 print(f"error: empty TTS response for {name}")
                 continue

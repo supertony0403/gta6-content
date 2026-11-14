@@ -83,6 +83,7 @@ def main():
     VO_DIR.mkdir(exist_ok=True)
     only = set(sys.argv[1:])
     vid = None
+    settings = cfg.get("settings", SETTINGS)
     for clip in cfg["clips"]:
         if only and clip["id"] not in only:
             continue
@@ -90,9 +91,9 @@ def main():
             print(f"error: invalid clip id {clip['id']!r}")
             continue
         dst = CLIPS / f"{clip['id']}.mp4"
-        tag = hashlib.sha256(json.dumps([RENDER_VERSION, clip, cfg, SETTINGS, DUCK, VO_DELAY, W, H, FG_H],
+        tag = hashlib.sha256(json.dumps([RENDER_VERSION, clip, cfg, settings, DUCK, VO_DELAY, W, H, FG_H],
                                         ensure_ascii=False).encode()).hexdigest()[:10]
-        vo_tag = hashlib.sha256(json.dumps([clip["vo"], cfg["voice"], cfg["model"], SETTINGS],
+        vo_tag = hashlib.sha256(json.dumps([clip["vo"], cfg["voice"], cfg["model"], settings],
                                            ensure_ascii=False).encode()).hexdigest()[:10]
         mp3 = VO_DIR / f"{clip['id']}-{vo_tag}.mp3"
         stamp = CLIPS / f".{clip['id']}.{tag}"
@@ -103,7 +104,7 @@ def main():
             vid = vid or voice_id(cfg["voice"], key)
             try:
                 audio = api(f"/v1/text-to-speech/{vid}?output_format=mp3_44100_128", key,
-                            {"text": clip["vo"], "model_id": cfg["model"], "voice_settings": SETTINGS})
+                            {"text": clip["vo"], "model_id": cfg["model"], "voice_settings": settings})
             except (urllib.error.URLError, OSError) as err:
                 print(f"error: TTS failed for {clip['id']}: {err}")
                 continue

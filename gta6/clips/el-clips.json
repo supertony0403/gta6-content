@@ -1,7 +1,7 @@
 {
   "quelle": "gta6/quelle/extended-look.mp4",
   "credit": "Quelle: Rockstar Games · GTA VI: An Extended Look",
-  "voice": "Daniel Dark - Crime Narrator",
+  "voice": "Tom Magic - german young adult perfect narrator. ",
   "model": "eleven_multilingual_v2",
   "clips": [
     {
@@ -131,7 +131,7 @@
       "start": "11:37",
       "end": "12:24",
       "hook": "BRIAN ERZÄHLT. DANEBEN ESKALIERT ALLES.",
-      "vo": "Brian erzählt eine Geschichte vom Jahrmarkt. Und nebenan eskaliert alles.",
+      "vo": "Bro, achte auf den Hintergrund! Brian erzählt seelenruhig vom Jahrmarkt und daneben eskaliert ALLES. GTA 6 wird so krass!",
       "subs": [
         [
           "11:38",
@@ -200,7 +200,7 @@
       "start": "13:27",
       "end": "13:52",
       "hook": "ERSTES TREFFEN MIT DEM BOSS",
-      "vo": "Erstes Treffen mit dem neuen Boss. Er sagt nicht mal Hallo.",
+      "vo": "Okay, das ist der neue Boss. Kein Hallo, nix, direkt Verfolgungsjagd! Ich brauch dieses Spiel JETZT!",
       "subs": [
         [
           "13:28",
@@ -335,7 +335,7 @@
       "start": "22:29.5",
       "end": "22:54.5",
       "hook": "IHR SOLLT AUF IHN AUFPASSEN",
-      "vo": "Andrés de León. Ihr sollt auf ihn aufpassen. Viel Glück.",
+      "vo": "Euer Job: auf DEN hier aufpassen. Der Typ ist komplett drüber! Das wird so ein Chaos!",
       "subs": [
         [
           "22:30",
@@ -429,7 +429,7 @@
       "start": "00:01.5",
       "end": "00:40",
       "hook": "SO STARTET DAS EXTENDED LOOK",
-      "vo": "So beginnt Rockstars neues GTA 6 Video. Direkt im Drogenviertel.",
+      "vo": "So startet Rockstars neues GTA 6 Video. Direkt im Drogenviertel. Leute, das ist next level!",
       "subs": [
         [
           "00:03",
@@ -494,7 +494,7 @@
       "start": "03:38",
       "end": "04:15",
       "hook": "MITTEN IM DEAL KOMMT DIE RAZZIA",
-      "vo": "Ein ganz normaler Deal. Bis die Task Force die Tür eintritt.",
+      "vo": "Ganz normaler Deal, alles chillig, und dann: Razzia! Die Task Force tritt die Tür ein! Wie krass ist das bitte?",
       "subs": [
         [
           "03:38",
@@ -563,7 +563,7 @@
       "start": "04:52",
       "end": "05:21",
       "hook": "DER COP IST DER BÖSE",
-      "vo": "Und dann taucht er auf. Der Cop, vor dem selbst die Gangster Angst haben.",
+      "vo": "Und dann kommt ER. Der Cop, vor dem sogar die Gangster Angst haben. Gänsehaut, Bro!",
       "subs": [
         [
           "04:56",
@@ -608,7 +608,7 @@
       "start": "06:22.5",
       "end": "07:03",
       "hook": "JASON VS. LUCIAS OUTFIT-FRAGE",
-      "vo": "Jason gegen die gefährlichste Frage überhaupt. Welches Kleid?",
+      "vo": "Jason gegen die gefährlichste Frage der Welt: Welches Kleid? Bro, wir alle kennen das!",
       "subs": [
         [
           "06:24",
@@ -677,7 +677,7 @@
       "start": "24:31",
       "end": "24:48",
       "hook": "„NICHT DAS GESICHT, MANN!“",
-      "vo": "Andrés hat in diesem Moment genau eine Sorge.",
+      "vo": "Andrés hat in diesem Moment genau EINE Sorge. Wartet's ab!",
       "subs": [
         [
           "24:33",
@@ -718,7 +718,7 @@
       "start": "25:45",
       "end": "26:16",
       "hook": "DAS ENDE TRIFFT ANDERS",
-      "vo": "Das Ende des Extended Look. Andrés sagt etwas, das hängen bleibt.",
+      "vo": "Das Ende vom Extended Look. Bro, dieser Satz geht so tief. GTA 6, ich bin bereit!",
       "subs": [
         [
           "25:47",
@@ -757,6 +757,426 @@
           "Glaub mir."
         ]
       ]
+    },
+    {
+      "id": "el15-vice-city-girls",
+      "start": "08:44",
+      "end": "09:20",
+      "hook": "WILLKOMMEN IN VICE CITY",
+      "vo": "Bro, diese Grafik! Einfach mit dem Cabrio durch Vice City. Und dann DAS!",
+      "subs": [
+        [
+          "08:50",
+          "Beziehungen leben von Kommunikation, Jay."
+        ],
+        [
+          "08:53",
+          "Klar, ja. Tut mir leid."
+        ],
+        [
+          "08:56",
+          "Wo seid ihr, Vice-City-Girls?"
+        ],
+        [
+          "08:58",
+          "Scheiße, oh nein! Argh!"
+        ],
+        [
+          "09:01",
+          "Was hab ich verdammt nochmal gesagt?"
+        ],
+        [
+          "09:15",
+          "Was zum Teufel machst du da?"
+        ],
+        [
+          "09:17",
+          "Siehst du das?"
+        ],
+        [
+          "09:18",
+          "Sieh an, wer wieder da ist."
+        ]
+      ]
+    },
+    {
+      "id": "el16-motel",
+      "start": "09:18",
+      "end": "09:52",
+      "hook": "JASON IST EHRLICH",
+      "vo": "Jason sagt hier was, das so viele GTA Spieler fühlen. Hört genau hin!",
+      "subs": [
+        [
+          "09:18",
+          "Sieh an, wer wieder da ist."
+        ],
+        [
+          "09:34",
+          "Was?"
+        ],
+        [
+          "09:35",
+          "Manchmal fühl ich mich einfach wohler, wenn ich eine Waffe benutzen muss, weißt du?"
+        ],
+        [
+          "09:38",
+          "Sei einfach charmant, okay?"
+        ],
+        [
+          "09:41",
+          "Ja."
+        ],
+        [
+          "09:42",
+          "Und mach dir keine Sorgen wegen Brian. Der ist in Rente."
+        ],
+        [
+          "09:45",
+          "Schau dir Loris Snapmatic an. Sieht aus, als hätten die richtig Spaß."
+        ],
+        [
+          "09:51",
+          "Da sind sie. An der Bar."
+        ]
+      ]
+    },
+    {
+      "id": "el17-brian-lori",
+      "start": "10:00",
+      "end": "10:24",
+      "hook": "BRIAN UND LORI SIND ZURÜCK",
+      "vo": "Brian und Lori! Die Fans kennen die beiden. Und Lori will ALLES wissen!",
+      "subs": [
+        [
+          "10:01",
+          "Oh mein Gott, ich glaub's nicht. Schaut euch zwei an."
+        ],
+        [
+          "10:06",
+          "Hey, Lori. Schön dich zu sehen, Brian."
+        ],
+        [
+          "10:08",
+          "Mhm."
+        ],
+        [
+          "10:09",
+          "Oh, komm her, umarm uns."
+        ],
+        [
+          "10:11",
+          "Ich hab zu Brian gesagt, ich dachte, ihr seid beide tot."
+        ],
+        [
+          "10:15",
+          "Also, worauf habt ihr euch eingelassen? Ich will alles wissen."
+        ]
+      ]
+    },
+    {
+      "id": "el18-verfolgung",
+      "start": "13:41",
+      "end": "14:24",
+      "hook": "DIESE VERFOLGUNGSJAGD!",
+      "vo": "Haltet euch fest! Lucia fährt, Raul schießt, und die Cops sind überall! Das ist SO krass!",
+      "subs": [
+        [
+          "13:41",
+          "Los, los! Verdammter Psycho, zeig, was du draufhast!"
+        ],
+        [
+          "13:48",
+          "Hey, Bruder, komm sofort zurück!"
+        ],
+        [
+          "13:50",
+          "Hä?"
+        ],
+        [
+          "13:50.8",
+          "Komm schon, du musst die Typen aufhalten."
+        ],
+        [
+          "13:54",
+          "Ich hab hier was zum Spielen für dich."
+        ],
+        [
+          "13:56",
+          "Hier, nimm das."
+        ],
+        [
+          "14:00",
+          "Hier wird's voll."
+        ],
+        [
+          "14:05",
+          "Ich brech durch zur Autobahn!"
+        ],
+        [
+          "14:10",
+          "Negativ. Bleib in der Gegend."
+        ],
+        [
+          "14:12",
+          "Okay."
+        ],
+        [
+          "14:14",
+          "Jay, festhalten!"
+        ],
+        [
+          "14:22",
+          "Fahr uns hier nicht in die Falle, Lu!"
+        ]
+      ]
+    },
+    {
+      "id": "el19-gym",
+      "start": "17:03",
+      "end": "17:41",
+      "hook": "DAS LEBEN IN LEONIDA",
+      "vo": "Bro, schaut euch an, wie lebendig diese Welt ist! Gym, Leute, Party. GTA 6 wird unreal!",
+      "subs": [
+        [
+          "17:03",
+          "Wieder in Bayside."
+        ],
+        [
+          "17:04",
+          "Willst du dich umsehen?"
+        ],
+        [
+          "17:19",
+          "Ellbogen eng, und drücken!"
+        ],
+        [
+          "17:26",
+          "Oh j-ja!"
+        ],
+        [
+          "17:33",
+          "Yo, Jay! Was geht, Baby?"
+        ],
+        [
+          "17:35",
+          "Was geht, Mann?"
+        ],
+        [
+          "17:36",
+          "Loony! Was geht, Mädel?"
+        ],
+        [
+          "17:39",
+          "Hintern hoch! Booty, booty, booty, twerk!"
+        ]
+      ]
+    },
+    {
+      "id": "el20-hugger",
+      "start": "19:35",
+      "end": "20:08",
+      "hook": "„SORRY, ICH BIN EIN HUGGER“",
+      "vo": "Andrés de León ist der lauteste Typ in GTA 6. Und ich feier ihn jetzt schon!",
+      "subs": [
+        [
+          "19:35",
+          "Hey! Was für ein Anblick! Tina! Was geht, Chula?"
+        ],
+        [
+          "19:40",
+          "Andrés! Ewig nicht gesehen, wie läuft's?"
+        ],
+        [
+          "19:44",
+          "Ah, Mann, es hört nicht auf."
+        ],
+        [
+          "19:45",
+          "Lucia, Jason. Darf ich vorstellen: Andrés de León."
+        ],
+        [
+          "19:48",
+          "Sorry Leute, ich bin ein Hugger. Kommt her, rein da!"
+        ],
+        [
+          "19:50",
+          "Oh."
+        ],
+        [
+          "19:51",
+          "Ja! Alles klar!"
+        ],
+        [
+          "19:52",
+          "Wunderschön, ja. Großartig! Stark. Gut gemacht."
+        ],
+        [
+          "19:57",
+          "Sollen wir, Gentlemen?"
+        ],
+        [
+          "19:58",
+          "Du bist dann wohl der Fahrer?"
+        ],
+        [
+          "19:59.6",
+          "Sicher. Okay, los geht's."
+        ]
+      ]
+    },
+    {
+      "id": "el21-ohne-waffen",
+      "start": "21:54",
+      "end": "22:20",
+      "hook": "SECURITY OHNE WAFFEN",
+      "vo": "Jason soll Bodyguard sein. Problem: Die Security hat ihm die Waffen abgenommen!",
+      "subs": [
+        [
+          "21:56",
+          "Irgendein Security-Typ hat mir gerade die Waffen abgenommen."
+        ],
+        [
+          "21:59",
+          "Gut, dass du mit den Händen was draufhast."
+        ],
+        [
+          "22:00",
+          "Die Jungs haben alles im Griff. Wird schon passen."
+        ],
+        [
+          "22:02",
+          "Okay."
+        ],
+        [
+          "22:04",
+          "Mach schon, Bro! Mach, mach, mach!"
+        ],
+        [
+          "22:06",
+          "Ich komme!"
+        ],
+        [
+          "22:10",
+          "Privates Meeting! Nicht reinkommen!"
+        ],
+        [
+          "22:12",
+          "Hey, Andrés."
+        ],
+        [
+          "22:13",
+          "Alles gut, alles gut, das ist mein Typ!"
+        ],
+        [
+          "22:16",
+          "Hey, Kumpel. Wir weihen nur das neue Gebäude ein."
+        ]
+      ]
+    },
+    {
+      "id": "el22-granate",
+      "start": "23:52",
+      "end": "24:22",
+      "hook": "„SCHÖNE ABLENKUNG, JAY“",
+      "vo": "Leute, Jason improvisiert hier komplett! Und Lucia so: Bisschen dramatisch!",
+      "subs": [
+        [
+          "23:53",
+          "Los!"
+        ],
+        [
+          "23:54",
+          "Hey, hey, hey! Gib mir das Handy."
+        ],
+        [
+          "23:56",
+          "Wen soll ich denn anrufen? Ich bin nicht blöd."
+        ],
+        [
+          "23:58",
+          "Na, Jungs. Wie läuft's da unten?"
+        ],
+        [
+          "24:01",
+          "Wer zum Teufel ist das?"
+        ],
+        [
+          "24:02",
+          "Wir reden später, okay?"
+        ],
+        [
+          "24:04",
+          "Was zum Teufel?"
+        ],
+        [
+          "24:07",
+          "Wir haben ein Problem."
+        ],
+        [
+          "24:08",
+          "Scheiße, Scheiße, Granate!"
+        ],
+        [
+          "24:15",
+          "Schöne Ablenkung, Jay. Bisschen dramatisch."
+        ],
+        [
+          "24:18",
+          "Gern geschehen. Ich geh hoch. Er hat Andrés."
+        ],
+        [
+          "24:20",
+          "Scheiße, okay. Bin unterwegs."
+        ]
+      ]
+    },
+    {
+      "id": "el23-handschellen",
+      "start": "25:20",
+      "end": "25:44",
+      "hook": "„TU WEH, ODER?“",
+      "vo": "Lucia hat einfach keine Gnade. Wartet auf den letzten Satz!",
+      "subs": [
+        [
+          "25:29",
+          "Ahhh!!"
+        ],
+        [
+          "25:32",
+          "Tut weh, oder? Versuch mal, die zu tragen, Miststück."
+        ],
+        [
+          "25:39",
+          "Das glaub ich kaum, Miststück!"
+        ],
+        [
+          "25:40",
+          "Ah, Scheiße!"
+        ]
+      ]
+    },
+    {
+      "id": "el24-flucht",
+      "start": "05:54",
+      "end": "06:24",
+      "hook": "DIE FLUCHT AUS DEM BLOCK",
+      "vo": "Raus durchs Fenster und ab ins Auto! Diese Szenen in GTA 6 sind einfach Kino, Bro!",
+      "subs": [
+        [
+          "05:51",
+          "Tante Tee! Komm schon!"
+        ],
+        [
+          "05:53",
+          "Vorsicht. Scheiße!"
+        ]
+      ]
     }
-  ]
+  ],
+  "settings": {
+    "stability": 0.28,
+    "similarity_boost": 0.8,
+    "style": 0.75,
+    "use_speaker_boost": true
+  }
 }
