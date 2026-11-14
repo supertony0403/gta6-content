@@ -34,3 +34,9 @@ Der Preis ist bewusst weggelassen, weil die Angaben sich widersprechen. Regel-Ch
 | fakt-2-duo | So 15.11. abends | Jason und Lucia: die zwei Hauptfiguren von GTA 6 #Shorts | Jason oder Lucia: Wer ist dein Favorit? #GTA6 #GTAVI |
 | fakt-3-konsole | Mo 16.11. abends | GTA 6: Auf welchen Konsolen? #Shorts | PS5 oder Xbox Series X\|S: Worauf spielst du? #GTA6 #PS5 #Xbox |
 | fakt-4-pc | Di 17.11. abends | GTA 6 auf PC? Stand heute #Shorts | Für PC gibt es noch keinen Termin. Wartest du oder holst du dir eine Konsole? #GTA6 #PCGaming |
+
+## Voiceover-Fassungen (*-vo.mp4)
+
+Gleiche Shorts mit KI-Sprecher (ElevenLabs, Stimme „Daniel Dark - Crime Narrator“), Texte in
+`voiceover.json`, Erzeugung mit `tools/voiceover.py`. Für TikTok die **-vo-Fassungen** nehmen und beim
+Hochladen **„KI-generierte Inhalte“** einschalten (synthetische Stimme). Captions wie oben.

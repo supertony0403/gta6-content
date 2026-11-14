@@ -1,0 +1,16 @@
+{
+  "voice": "Daniel Dark - Crime Narrator",
+  "model": "eleven_multilingual_v2",
+  "texte": {
+    "countdown-5tage": "Noch fünf Tage. Am neunzehnten November erscheint GTA 6, für PS5 und Xbox Series. Folg dem Kanal: Ab dem Start gibt's hier jeden Tag die besten Momente.",
+    "countdown-4tage": "Noch vier Tage bis GTA 6. Was machst du zuerst? Die Story, oder einfach nur Chaos in Vice City? Schreib's in die Kommentare.",
+    "countdown-3tage": "Drei Tage. Wer hat sich für den neunzehnten schon Urlaub genommen? Ehrlich jetzt.",
+    "countdown-2tage": "Übermorgen ist es so weit. PS5 oder Xbox: Worauf spielst du GTA 6?",
+    "countdown-1tag": "Morgen. Morgen erscheint GTA 6. Wer schläft heute Nacht überhaupt noch?",
+    "countdown-heute": "Es ist so weit. GTA 6 ist da. Ab heute zeigen wir dir hier jeden Tag die besten Momente aus Vice City.",
+    "fakt-1-ort": "GTA 6 bringt uns zurück nach Vice City. Diesmal im ganzen Bundesstaat Leonida.",
+    "fakt-2-duo": "Zwei Hauptfiguren: Jason und Lucia. Auf wen freust du dich mehr?",
+    "fakt-3-konsole": "Zum Start erscheint GTA 6 auf PS5 und auf Xbox Series X und S.",
+    "fakt-4-pc": "Und auf dem PC? Für die PC-Version gibt es bisher keinen Termin."
+  }
+}
