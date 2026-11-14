@@ -8,3 +8,4 @@ gta6/clips/*.ass
 # Verdienste bleiben privat
 gta6/tracker.csv
 __pycache__/
+gta6/clips/.el*

@@ -1,0 +1,151 @@
+{
+  "quelle": "gta6/quelle/extended-look.mp4",
+  "credit": "Quelle: Rockstar Games · GTA VI: An Extended Look",
+  "voice": "Daniel Dark - Crime Narrator",
+  "model": "eleven_multilingual_v2",
+  "clips": [
+    {
+      "id": "el01-tante-tee", "start": "05:23.5", "end": "05:56",
+      "hook": "TANTE TEE HAT KEINEN BOCK MEHR",
+      "vo": "Ihr flieht vor der Polizei. Und landet ausgerechnet bei Tante Tee.",
+      "subs": [
+        ["05:24", "Die bringen noch mehr Cops von unten rein."],
+        ["05:26", "Kommt rein, bevor sie euch kriegen!"],
+        ["05:28", "Danke, Mann."],
+        ["05:28.8", "Raymond, was zum Teufel ist hier los?"],
+        ["05:32", "Was macht ihr hier drin?"],
+        ["05:33", "Hast du das draußen nicht gehört? Warte mal kurz."],
+        ["05:36", "„Warte mal“? Hier rennen Leute durch mein Haus!"],
+        ["05:39", "Ihr dürft hier nicht einfach rein!"],
+        ["05:42", "Immer wenn ich Ruhe will, ist irgendwas!"],
+        ["05:45", "Und das ist meine Schuld?"],
+        ["05:47", "Meine Klimaanlage! Klettert nicht aus meinem Fenster!"],
+        ["05:51", "Tante Tee! Komm schon!"],
+        ["05:53", "Vorsicht. Scheiße!"]
+      ]
+    },
+    {
+      "id": "el02-fake-werbung", "start": "07:24.5", "end": "08:03.5",
+      "hook": "ROCKSTARS FAKE-WERBUNG IST ZURÜCK",
+      "vo": "Rockstar macht wieder Fake-Werbung. Und sie ist komplett krank.",
+      "subs": [
+        ["07:25", "Fühlt sich das Leben hoffnungslos an?"],
+        ["07:27", "Suchst du ständig nach einem Ausweg?"],
+        ["07:30", "Zum Glück ist das vorbei: dank Angstipan!"],
+        ["07:34", "Ah, die freie Natur. Spielplatz der Natur."],
+        ["07:38", "Ein Jahrmarkt unendlicher Möglichkeiten."],
+        ["07:41", "Voller Geschöpfe, groß und klein."],
+        ["07:45", "Prächtig und stolz."],
+        ["07:48", "Hunger?"],
+        ["07:51", "Jetzt nicht mehr."],
+        ["07:52", "Saftiges Fleisch aus freier Wildbahn,"],
+        ["07:55", "getoppt mit unseren weltberühmten Brötchen."],
+        ["08:00", "Fertig."],
+        ["08:01", "Verdammt. Hat sich gelohnt."]
+      ]
+    },
+    {
+      "id": "el03-karussell", "start": "11:37", "end": "12:24",
+      "hook": "BRIAN ERZÄHLT. DANEBEN ESKALIERT ALLES.",
+      "vo": "Brian erzählt eine Geschichte vom Jahrmarkt. Und nebenan eskaliert alles.",
+      "subs": [
+        ["11:38", "Eines Nachts sind wir rein, und ein Kumpel hat es zum Laufen gebracht."],
+        ["11:44", "Sieh an, wen das Gesetz hier reingejagt hat."],
+        ["11:47", "Die Einheimischen sind temperamentvoll!"],
+        ["11:48", "Leonida, Baby."],
+        ["11:49", "Dann hat er es so schnell gedreht, dass wir dachten, wir fliegen."],
+        ["11:53", "Was jetzt?"],
+        ["11:56", "Es wurde immer schneller, und ich dachte: „Na, Scheiße.“"],
+        ["12:02", "„Das ist nicht gut.“"],
+        ["12:04", "Runter!"],
+        ["12:05", "Und ich bin verdammt nochmal gesprungen."],
+        ["12:08", "Jimmy Canto ist draufgeblieben."],
+        ["12:11", "Schädel aufgeschlagen. Noch in der Nacht gestorben."],
+        ["12:15", "Willst du mir was sagen?"],
+        ["12:16", "Ja. Du musst wissen, wann du abspringst, Jason."],
+        ["12:22", "Hörst du?"]
+      ]
+    },
+    {
+      "id": "el04-raul", "start": "13:27", "end": "13:52",
+      "hook": "ERSTES TREFFEN MIT DEM BOSS",
+      "vo": "Erstes Treffen mit dem neuen Boss. Er sagt nicht mal Hallo.",
+      "subs": [
+        ["13:28", "Jason? Lucia?"],
+        ["13:30", "Ja."],
+        ["13:32", "Wir müssen los."],
+        ["13:33", "Los?"],
+        ["13:33.8", "Ja, los. Und zwar sofort, verdammt."],
+        ["13:36", "Wofür dachtest du, brauche ich eine Mitfahrgelegenheit?"],
+        ["13:38", "Scheiße. Vorsichtig ist er wirklich."],
+        ["13:41", "Los, los! Verdammter Psycho, zeig, was du draufhast!"],
+        ["13:48", "Hey, Bruder, komm sofort zurück!"],
+        ["13:50", "Hä?"]
+      ]
+    },
+    {
+      "id": "el05-bankueberfall", "start": "16:10.5", "end": "16:32",
+      "hook": "„FREITAG MORGENS: BANKÜBERFALL“",
+      "vo": "Raul hat einfach den trockensten Humor.",
+      "subs": [
+        ["16:11", "Okay Jason, wir sind Fracht."],
+        ["16:14", "Verstanden."],
+        ["16:17", "Nächstes Mal vielleicht eine Vorwarnung?"],
+        ["16:20", "Soll ich's dir in den Kalender eintragen?"],
+        ["16:22", "„Freitag morgens, Banküberfall.“ Komm schon."],
+        ["16:27", "Haben wir den Test bestanden?"],
+        ["16:29", "Ihr wart okay. Wir leben noch."]
+      ]
+    },
+    {
+      "id": "el06-streamer", "start": "18:04", "end": "18:31",
+      "hook": "STREAMER IN GTA 6 SIND GENAU WIE IN ECHT",
+      "vo": "Rockstar hat Streamer ins Spiel gepackt. Und sie sind genau so, wie du denkst.",
+      "subs": [
+        ["18:05", "Die Cops sind unterwegs."],
+        ["18:11", "Oh Scheiße! Wer zum Teufel bist du?"],
+        ["18:14", "Was soll das?"],
+        ["18:15", "Oh, die Kofferraum-Challenge!"],
+        ["18:16", "Moment, hast du das Auto von meinem Kumpel geklaut?"],
+        ["18:19", "Ja."],
+        ["18:19.6", "Heilige Scheiße, Chat! Was soll ich machen?"],
+        ["18:22", "Meine Güte."],
+        ["18:24", "Schau, schau, schau, schau."],
+        ["18:25", "Die echten Cops sind hinter uns her."]
+      ]
+    },
+    {
+      "id": "el07-andres", "start": "22:29.5", "end": "22:54.5",
+      "hook": "IHR SOLLT AUF IHN AUFPASSEN",
+      "vo": "Andrés de León. Ihr sollt auf ihn aufpassen. Viel Glück.",
+      "subs": [
+        ["22:30", "Die wollen, dass ich dich jetzt zur Party bringe."],
+        ["22:34", "Petra will dich. Gleich gibt's eine große Rede."],
+        ["22:36", "Nein! Scheiß drauf, scheiß drauf!"],
+        ["22:40", "Sorry, nein. Auf keinen Fall. Wir sind gerade im Flow."],
+        ["22:43", "Mein Frontalkortex läuft auf Hochtouren!"],
+        ["22:45", "Wie viele Ideen hatte ich in den letzten fünf Minuten?"],
+        ["22:47", "So viele, Bro. So verdammt viele."],
+        ["22:49", "Als wär die Band wieder zusammen. Und ich kenn die Typen erst seit eben."],
+        ["22:53", "Kommt schon, Leute."]
+      ]
+    },
+    {
+      "id": "el08-party-vorbei", "start": "22:54.5", "end": "23:27",
+      "hook": "DIE PARTY IST VORBEI",
+      "vo": "Große Eröffnungsparty. Hält keine zwanzig Sekunden.",
+      "subs": [
+        ["22:55", "Hallo zusammen."],
+        ["22:57", "Danke, dass ihr heute mit uns die Eröffnung feiert"],
+        ["23:01", "von Megamundos erster Zentrale auf amerikanischem Boden."],
+        ["23:08", "Wir haben das gemeinsam geschafft. Als Familie."],
+        ["23:14", "Die Party ist vorbei!"],
+        ["23:16", "Alle auf den Boden! Sofort!"],
+        ["23:18", "Was zum Teufel?"],
+        ["23:19", "Schützt die Zielperson."],
+        ["23:20", "Scheiße!"],
+        ["23:21", "Los, los, los!"]
+      ]
+    }
+  ]
+}
