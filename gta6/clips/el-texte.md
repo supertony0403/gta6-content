@@ -15,3 +15,9 @@ Beim Hochladen: **„KI-generierter Inhalt“** einschalten (KI-Stimme). Keine K
 | el06-streamer | Streamer in GTA 6 sind genau wie in echt 💀 #GTA6 #GTAVI #Streamer |
 | el07-andres | Ihr sollt auf DEN aufpassen. Viel Glück #GTA6 #GTAVI #ViceCity |
 | el08-party-vorbei | Die Party hält keine 20 Sekunden #GTA6 #GTAVI #Gaming |
+| el09-crackheads | So startet Rockstars Extended Look zu GTA 6 #GTA6 #GTAVI #ViceCity |
+| el10-razzia | Mitten im Deal kommt die Razzia #GTA6 #GTAVI #Gaming |
+| el11-mendez | Der gefährlichste Typ in GTA 6 ist ein Cop #GTA6 #GTAVI #Leonida |
+| el12-outfit | Jason vs. die gefährlichste Frage überhaupt 😅 #GTA6 #GTAVI #JasonUndLucia |
+| el13-nicht-das-gesicht | „Nicht das Gesicht, Mann!“ #GTA6 #GTAVI #Gaming |
+| el14-glory-days | Das Ende des Extended Look trifft anders #GTA6 #GTAVI #ViceCity |
