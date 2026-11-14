@@ -1,0 +1,10 @@
+# Quellmaterial und fertige Clips nie ins Repo (Rechte der Streamer, Groesse)
+gta6/quelle/
+gta6/clips/*.mp4
+gta6/clips/*.png
+gta6/clips/*.ass
+*.mp3
+*.wav
+# Verdienste bleiben privat
+gta6/tracker.csv
+__pycache__/
