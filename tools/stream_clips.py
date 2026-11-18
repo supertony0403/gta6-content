@@ -9,6 +9,7 @@ Output: gta6/clips/stream/<key>-<nnn>.mp4 plus a line in stream-clips.jsonl
 import argparse
 import json
 import os
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -24,9 +25,16 @@ W, H, FG_H = 1080, 1920, 608
 FG_Y = (H - FG_H) // 2
 PRE, POST = 20.0, 10.0          # seconds before/after the loudness peak
 MARGIN = 40.0                   # never touch the still-growing tail
-MIN_GAP = 60.0                  # minimum distance between two picked peaks
-PER_10MIN = 3                   # picks per 10 minutes of new material
+MIN_GAP = 45.0                  # minimum distance between two picked peaks
+PER_10MIN = 6                   # picks per 10 minutes of new material
 SR = 16000
+# hard slurs -> clip is dropped (TikTok bans for these); swear words -> masked in subtitles
+SLURS = re.compile(r"\b(nigg\w*|nigga\w*|n-word|fagg?\w*|retard\w*|tranny)\b", re.I)
+SWEAR = re.compile(r"\b(fuck\w*|shit\w*|bitch\w*|motherfuck\w*|cunt\w*|dick\w*|pussy\w*)\b", re.I)
+
+
+def mask(text):
+    return SWEAR.sub(lambda m: m.group(0)[0] + "*" * (len(m.group(0)) - 1), text)
 
 
 def run(cmd, **kw):
@@ -69,7 +77,7 @@ def peaks(samples, offset, count, last_peak=-1e9):
     picked = []
     for i in order:
         t = offset + i * 0.5
-        if smooth[i] - floor < 8:            # must clearly stand out (shouting, explosion, laughing)
+        if smooth[i] - floor < 6:            # must clearly stand out (shouting, explosion, laughing)
             break
         if t - last_peak >= MIN_GAP and all(abs(t - p) >= MIN_GAP for p, _ in picked):
             picked.append((t, float(smooth[i] - floor)))
@@ -178,7 +186,7 @@ def main():
         st["done_until"] = 0.0
     end = total - MARGIN
     begin = st["done_until"]
-    if end - begin < 300:
+    if end - begin < 150:
         print(f"wait: only {max(0, end - begin):.0f}s new material in {src.name}")
         return
     span = min(end - begin, 1800.0)                  # at most 30 min per run
@@ -211,13 +219,16 @@ def make_clip(args, cfg, src, total, t, score, state, counters):
         cid = f"{args.key}-{n:03d}"
         dst = OUT / f"{cid}.mp4"
         words, lang = transcribe(audio(src, start, length))
+        text = " ".join(w[2] for w in words)
+        if SLURS.search(text):
+            print(f"drop: {cid} contains a slur")
+            return 0
         hooks = cfg["hooks"]
         hook = hooks[(n - 1) % len(hooks)]
         ass = OUT / f"{cid}.ass"
-        write_ass(ass, hook, cfg["credit"], chunks(words), length)
+        write_ass(ass, hook, cfg["credit"], [(a, b, mask(t)) for a, b, t in chunks(words)], length)
         render(src, start, length, ass, dst)
         ass.unlink(missing_ok=True)
-        text = " ".join(w[2] for w in words)
         caption = cfg["caption"].format(hook=hook)
         with INDEX.open("a", encoding="utf-8") as f:
             f.write(json.dumps({"id": cid, "file": str(dst), "streamer": args.key, "source": src.name,

@@ -113,7 +113,7 @@ def step(args, fails):
         for s in sources:
             if (ROOT / s["file"]).exists():
                 r = subprocess.run([sys.executable, str(ROOT / "tools" / "stream_clips.py"), s["key"],
-                                    str(ROOT / s["file"]), "--max", "4"], capture_output=True, text=True)
+                                    str(ROOT / s["file"]), "--max", "8"], capture_output=True, text=True)
                 print(r.stdout.strip(), r.stderr.strip()[-300:], flush=True)
         clips = read_index()
         todo = [c for c in clips if c["id"] not in done and Path(c["file"]).exists()]
