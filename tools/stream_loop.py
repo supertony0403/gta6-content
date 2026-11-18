@@ -85,6 +85,8 @@ def main():
     ap.add_argument("--target", type=int, default=100)
     ap.add_argument("--every", type=int, default=15, help="minutes between scheduled posts")
     ap.add_argument("--idle", type=int, default=240, help="seconds to wait when nothing is new")
+    ap.add_argument("--now", action="store_true", help="publish immediately instead of scheduling")
+    ap.add_argument("--gap", type=int, default=5, help="with --now: minimum minutes between posts")
     args = ap.parse_args()
     lock = open(ROOT / "gta6" / "kanal" / ".stream-loop.lock", "w")
     try:
@@ -121,6 +123,18 @@ def step(args, fails):
             time.sleep(args.idle)
             return False
         c = todo[0]
+        if args.now:
+            now = dt.datetime.now()
+            past = [dt.datetime.fromisoformat(w) for w in done.values() if w[:2] == "20"]
+            past = [w for w in past if w <= now]  # scheduled future posts don't count
+            ref = max(past) if past else None
+            wait = (ref + dt.timedelta(minutes=args.gap) - dt.datetime.now()).total_seconds() if ref else 0
+            if wait > 0:
+                time.sleep(min(wait, args.idle))
+                return False
+            slot = dt.datetime.now().replace(second=0, microsecond=0)
+            out = tiktok("prepare", c["file"], c["caption"])
+            return finish(c, slot, out, fails)
         slot = next_slot(last, args.every)
         if slot.month != dt.datetime.now().month:  # tiktok.mjs only picks days in the shown month
             print("slot is in next month, waiting", flush=True)
@@ -128,6 +142,11 @@ def step(args, fails):
             return False
         when = slot.strftime("%d %H:%M")
         out = tiktok("prepare", c["file"], c["caption"], when)
+        return finish(c, slot, out, fails)
+
+
+def finish(c, slot, out, fails):
+    if True:
         print(out.strip()[-400:], flush=True)
         if "PREPARED" not in out:
             fails[c["id"]] = fails.get(c["id"], 0) + 1
