@@ -8,6 +8,7 @@ Output: gta6/clips/stream/<key>-<nnn>.mp4 plus a line in stream-clips.jsonl
 """
 import argparse
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -34,7 +35,10 @@ def run(cmd, **kw):
 
 def duration(src):
     out = run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(src)])
-    return float(out.stdout.decode().strip() or 0)
+    try:
+        return float(out.stdout.decode().strip())
+    except ValueError:  # "N/A" on very young files
+        return 0.0
 
 
 def audio(src, start, length):
@@ -43,7 +47,13 @@ def audio(src, start, length):
     return np.frombuffer(out.stdout, dtype=np.int16).astype(np.float32) / 32768.0
 
 
-def peaks(samples, offset, count):
+def save_state(state):
+    tmp = STATE.with_suffix(".tmp")
+    tmp.write_text(json.dumps(state, indent=1))
+    os.replace(tmp, STATE)
+
+
+def peaks(samples, offset, count, last_peak=-1e9):
     """Loudest 1-second windows, relative to the window's own median (handles quiet/loud streams)."""
     hop = SR // 2
     n = len(samples) // hop
@@ -51,15 +61,17 @@ def peaks(samples, offset, count):
         return []
     rms = np.sqrt(np.mean(samples[: n * hop].reshape(n, hop) ** 2, axis=1) + 1e-12)
     db = 20 * np.log10(rms)
-    smooth = np.convolve(db, np.ones(2) / 2, mode="same")
+    smooth = db.copy()
     floor = np.median(smooth)
+    smooth[:2] = floor  # window edges are not real peaks
+    smooth[-2:] = floor
     order = np.argsort(smooth)[::-1]
     picked = []
     for i in order:
         t = offset + i * 0.5
         if smooth[i] - floor < 8:            # must clearly stand out (shouting, explosion, laughing)
             break
-        if all(abs(t - p) >= MIN_GAP for p, _ in picked):
+        if t - last_peak >= MIN_GAP and all(abs(t - p) >= MIN_GAP for p, _ in picked):
             picked.append((t, float(smooth[i] - floor)))
         if len(picked) >= count:
             break
@@ -156,35 +168,55 @@ def main():
     src = Path(args.source).resolve()
     state = json.loads(STATE.read_text()) if STATE.exists() else {}
     st = state.setdefault(src.name, {"done_until": 0.0, "count": 0})
+    counters = state.setdefault("_counters", {})
+    if args.key not in counters:  # migrate: continue after the highest id ever used for this streamer
+        counters[args.key] = max([v.get("count", 0) for k, v in state.items()
+                                  if k != "_counters" and k.startswith(args.key)] + [0])
     total = duration(src)
+    if total < st["done_until"] - 60:
+        print(f"warn: {src.name} shrank ({total:.0f}s < {st['done_until']:.0f}s), restarting analysis")
+        st["done_until"] = 0.0
     end = total - MARGIN
     begin = st["done_until"]
-    if end - begin < 120:
+    if end - begin < 300:
         print(f"wait: only {max(0, end - begin):.0f}s new material in {src.name}")
         return
     span = min(end - begin, 1800.0)                  # at most 30 min per run
     want = min(args.max, max(1, round(span / 600 * PER_10MIN)))
-    found = peaks(audio(src, begin, span), begin, want)
+    found = peaks(audio(src, begin, span), begin, want, st.get("last_peak", -1e9))
     OUT.mkdir(parents=True, exist_ok=True)
     made = 0
     for t, score in found:
+        try:
+            made += make_clip(args, cfg, src, total, t, score, state, counters)
+        except Exception as err:  # one bad clip must not stop the run or freeze the state
+            print(f"error: clip @{t:.0f}s: {err}")
+        st["last_peak"] = t
+        save_state(state)
+    st["done_until"] = begin + span
+    save_state(state)
+    print(f"done: {made} clips, analysed {begin:.0f}-{begin + span:.0f}s of {total:.0f}s")
+
+
+def make_clip(args, cfg, src, total, t, score, state, counters):
+    if True:
         start = max(0.0, t - PRE)
         length = min(PRE + POST, total - start - 5)
         if length < 12:
-            continue
-        st["count"] += 1
-        cid = f"{args.key}-{st['count']:03d}"
+            return 0
+        counters[args.key] += 1
+        while (OUT / f"{args.key}-{counters[args.key]:03d}.mp4").exists():
+            counters[args.key] += 1
+        n = counters[args.key]
+        cid = f"{args.key}-{n:03d}"
         dst = OUT / f"{cid}.mp4"
         words, lang = transcribe(audio(src, start, length))
         hooks = cfg["hooks"]
-        hook = hooks[(st["count"] - 1) % len(hooks)]
+        hook = hooks[(n - 1) % len(hooks)]
         ass = OUT / f"{cid}.ass"
         write_ass(ass, hook, cfg["credit"], chunks(words), length)
-        try:
-            render(src, start, length, ass, dst)
-        except RuntimeError as err:
-            print(f"error: {cid}: {err}")
-            continue
+        render(src, start, length, ass, dst)
+        ass.unlink(missing_ok=True)
         text = " ".join(w[2] for w in words)
         caption = cfg["caption"].format(hook=hook)
         with INDEX.open("a", encoding="utf-8") as f:
@@ -192,12 +224,8 @@ def main():
                                 "start": round(start, 1), "length": round(length, 1), "loud_db": round(score, 1),
                                 "lang": lang, "transcript": text[:300], "caption": caption},
                                ensure_ascii=False) + "\n")
-        made += 1
         print(f"ok: {cid} @{start:.0f}s (+{score:.1f} dB) {text[:60]!r}")
-    st["done_until"] = begin + span
-    STATE.write_text(json.dumps(state, indent=1))
-    print(f"done: {made} clips, analysed {begin:.0f}-{begin + span:.0f}s of {total:.0f}s")
-
+        return 1
 
 if __name__ == "__main__":
     sys.exit(main())
