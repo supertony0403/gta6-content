@@ -86,6 +86,7 @@ def main():
     ap.add_argument("--every", type=int, default=15, help="minutes between scheduled posts")
     ap.add_argument("--idle", type=int, default=240, help="seconds to wait when nothing is new")
     ap.add_argument("--now", action="store_true", help="publish immediately instead of scheduling")
+    ap.add_argument("--post-only", action="store_true", help="don't cut; another process runs stream_clips.py")
     ap.add_argument("--gap", type=int, default=5, help="with --now: minimum minutes between posts")
     args = ap.parse_args()
     lock = open(ROOT / "gta6" / "kanal" / ".stream-loop.lock", "w")
@@ -109,7 +110,7 @@ def step(args, fails):
         if len(done) >= args.target:
             print(f"target reached: {len(done)} scheduled")
             return True
-        sources = json.loads((CLIPS / "stream-sources.json").read_text())
+        sources = [] if args.post_only else json.loads((CLIPS / "stream-sources.json").read_text())
         for s in sources:
             if (ROOT / s["file"]).exists():
                 r = subprocess.run([sys.executable, str(ROOT / "tools" / "stream_clips.py"), s["key"],
