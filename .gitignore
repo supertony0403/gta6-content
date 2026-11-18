@@ -14,3 +14,6 @@ logs/
 gta6/clips/stream/
 gta6/clips/stream-state.json
 gta6/clips/stream-clips.jsonl
+gta6/kanal/stream-gepostet.log
+gta6/kanal/stream-unklar.log
+gta6/kanal/.stream-loop.lock

@@ -1,12 +1,38 @@
 {
-  "tomo": {
-    "credit": "Clip: Tomo (YouTube @Tomovids)",
-    "caption": "{hook} 😂 Tomo spielt GTA 6 (YouTube @Tomovids) #gta6 #tomo #gtavi #vicecity #gaming #fyp",
-    "hooks": ["ER RASTET KOMPLETT AUS", "DAS HAT KEINER KOMMEN SEHEN", "ERSTER TAG IN GTA 6", "WARTE AUF DAS ENDE", "GTA 6 IST EINFACH KRANK", "CHAOS IN VICE CITY", "SO SPIELT MAN GTA 6 NICHT", "DIE POLIZEI IN GTA 6...", "DAS IST ZU REALISTISCH", "ER HAT ES WIRKLICH GETAN", "DIESE REAKTION", "GTA 6 IN 30 SEKUNDEN"]
-  },
-  "dasgasd3m": {
-    "credit": "Clip: Dasgasd3m (kick.com/dasgasd3m)",
-    "caption": "{hook} 😂 Dasgasd3m in GTA 6 (Kick) #gta6 #dasgasd3m #gtavi #vicecity #gaming #fyp",
-    "hooks": ["GTA 6 IN NEUSEELAND ZUERST", "ER RASTET KOMPLETT AUS", "DAS HAT KEINER KOMMEN SEHEN", "WARTE AUF DAS ENDE", "CHAOS IN VICE CITY", "DIE POLIZEI IN GTA 6...", "DAS IST ZU REALISTISCH", "DIESE REAKTION", "ER HAT ES WIRKLICH GETAN", "GTA 6 IST EINFACH KRANK", "SO SPIELT MAN GTA 6 NICHT", "ERSTER TAG IN GTA 6"]
-  }
+ "tomo": {
+  "credit": "Clip: Tomo (YouTube @Tomovids)",
+  "caption": "{hook} 😂 Tomo spielt GTA 6 (YouTube @Tomovids) #tomo #tomovids #gta6 #gtavi #gta6deutsch #gta6german #vicecity #gta6clips #gta6gameplay #gta6release #rockstargames #gaming #gamingdeutsch #zocken #lustig #fürdich #fy #fyp #foryou #viral",
+  "hooks": [
+   "ER RASTET KOMPLETT AUS",
+   "DAS HAT KEINER KOMMEN SEHEN",
+   "ERSTER TAG IN GTA 6",
+   "WARTE AUF DAS ENDE",
+   "GTA 6 IST EINFACH KRANK",
+   "CHAOS IN VICE CITY",
+   "SO SPIELT MAN GTA 6 NICHT",
+   "DIE POLIZEI IN GTA 6...",
+   "DAS IST ZU REALISTISCH",
+   "ER HAT ES WIRKLICH GETAN",
+   "DIESE REAKTION",
+   "GTA 6 IN 30 SEKUNDEN"
+  ]
+ },
+ "dasgasd3m": {
+  "credit": "Clip: Dasgasd3m (kick.com/dasgasd3m)",
+  "caption": "{hook} 😂 Dasgasd3m zockt GTA 6 (kick.com/dasgasd3m) #dasgasd3m #kickstreamer #gta6 #gtavi #gta6deutsch #gta6german #vicecity #gta6clips #gta6gameplay #gta6release #rockstargames #gaming #gamingdeutsch #zocken #lustig #fürdich #fy #fyp #foryou #viral",
+  "hooks": [
+   "GTA 6 IN NEUSEELAND ZUERST",
+   "ER RASTET KOMPLETT AUS",
+   "DAS HAT KEINER KOMMEN SEHEN",
+   "WARTE AUF DAS ENDE",
+   "CHAOS IN VICE CITY",
+   "DIE POLIZEI IN GTA 6...",
+   "DAS IST ZU REALISTISCH",
+   "DIESE REAKTION",
+   "ER HAT ES WIRKLICH GETAN",
+   "GTA 6 IST EINFACH KRANK",
+   "SO SPIELT MAN GTA 6 NICHT",
+   "ERSTER TAG IN GTA 6"
+  ]
+ }
 }
