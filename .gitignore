@@ -10,3 +10,7 @@ gta6/tracker.csv
 __pycache__/
 gta6/clips/.el*
 gta6/clips/galerie.html
+logs/
+gta6/clips/stream/
+gta6/clips/stream-state.json
+gta6/clips/stream-clips.jsonl

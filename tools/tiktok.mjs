@@ -39,10 +39,11 @@ if (cmd === "status") {
   // synthetic voice → TikTok's "AI-generated content" label must be on
   await page.getByText("Mehr anzeigen").first().click({ timeout: 5000 }).catch(() => {});
   const aiSwitch = page.locator('xpath=//*[normalize-space(text())="KI-generierter Inhalt"]/ancestor::*[.//input[@role="switch"]][1]//input[@role="switch"]').first();
-  if (!(await aiSwitch.isChecked())) await aiSwitch.click({ force: true });
+  const wantAi = process.env.AI_LABEL !== "0"; // AI_LABEL=0 for clips without synthetic voice
+  if ((await aiSwitch.isChecked()) !== wantAi) await aiSwitch.click({ force: true });
   await page.waitForTimeout(1500);
   // TikTok may show a confirmation dialog for the AI label
-  await page.getByRole("button", { name: /^(Aktivieren|Einschalten|Bestätigen|OK|Turn on)$/ }).click({ timeout: 2500 }).catch(() => {});
+  if (wantAi) await page.getByRole("button", { name: /^(Aktivieren|Einschalten|Bestätigen|OK|Turn on)$/ }).click({ timeout: 2500 }).catch(() => {});
   console.log("AI_LABEL", await aiSwitch.isChecked());
   const vis = await page.getByRole("combobox").filter({ hasText: /^(Alle|Everyone|Follower|Freunde|Nur ich)/ }).first().innerText().catch(() => "?");
   console.log("VISIBILITY", vis.trim());
